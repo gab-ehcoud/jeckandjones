@@ -4,7 +4,7 @@ pipeline {
         stage("Deploy")
         {
             steps {
-                office365ConnectorSend webhookUrl: "${https://pietcoin.webhook.office.com/webhookb2/1a2edb24-8195-446e-b55e-0906fd185c72@173a253d-1408-45f8-94cf-cdf6054c53f6/IncomingWebhook/4e1c5c6e3be74bbf8bf6097c64724e97/6d5183f6-f8a5-4111-9ccb-a0d924410f33}",
+                office365ConnectorSend webhookUrl: "https://pietcoin.webhook.office.com/webhookb2/1a2edb24-8195-446e-b55e-0906fd185c72@173a253d-1408-45f8-94cf-cdf6054c53f6/IncomingWebhook/4e1c5c6e3be74bbf8bf6097c64724e97/6d5183f6-f8a5-4111-9ccb-a0d924410f33,
                 message: 'Code is deployed',
                 status: 'Success'            
             }
