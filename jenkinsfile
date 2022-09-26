@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    withCredentials([string(credentialsId: 'team-hook', variable: 'team-hook-token')]) {
     stages {     
         stage("Deploy")
         {
@@ -10,4 +11,5 @@ pipeline {
             }
         }
     }
+}
 }
