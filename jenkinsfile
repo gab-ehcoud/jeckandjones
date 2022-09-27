@@ -5,7 +5,7 @@ pipeline {
         {
             steps {
                 withCredentials([string(credentialsId: 'team-hook', variable: 'team-hook-token')]) {
-                    office365ConnectorSend webhookUrl: ${team-hook-token},
+                    office365ConnectorSend webhookUrl: "${team-hook-token}",
                     message: 'Code is deployed',
                     status: 'Success'            
             }
