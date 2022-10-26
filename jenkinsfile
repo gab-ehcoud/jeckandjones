@@ -6,7 +6,9 @@ pipeline {
         {
             steps {
                 echo "Deploying"                    
-                sh 'whoami'
+                sh 'whoami > whoami.txt'
+                sh "echo 'Hello World' > whoami.txt"
+                sh 'cat whoami.txt'
             }
         }
 }
