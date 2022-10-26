@@ -9,6 +9,9 @@ pipeline {
                 sh 'whoami >> whoami.txt'
                 sh "echo 'Hello World' >> whoami.txt"
                 sh 'cat whoami.txt'
+                sh 'ls -la'
+                sh 'rm whoami.txt'
+                sh 'ls -la'
             }
         }
 }
