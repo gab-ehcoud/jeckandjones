@@ -1,5 +1,4 @@
 //execute a whoami command on the agent
-sh 'whoami'
 pipeline {    
     agent any
     stages {     
@@ -10,6 +9,7 @@ pipeline {
                     office365ConnectorSend webhookUrl: '''${team-hook-token}''',
                     message: 'Code is deployed',
                     status: 'Success'            
+                    sh 'whoami'
             }
         }
     }
