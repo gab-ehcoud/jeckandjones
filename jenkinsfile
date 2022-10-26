@@ -5,10 +5,9 @@ pipeline {
         stage("Deploy")
         {
             steps {
-                                   
-                    sh 'whoami'
+                echo "Deploying"                    
+                sh 'whoami'
             }
         }
-    }
 }
 }
