@@ -1,4 +1,6 @@
-pipeline {
+//execute a whoami command on the agent
+sh 'whoami'
+pipeline {    
     agent any
     stages {     
         stage("Deploy")
